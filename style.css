@@ -29,6 +29,11 @@ html{
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
 }
+h1{
+  align-items: center;
+  font-size: 4rem;
+  font-family: 'poppins';
+}
 
 p{
   color: rgb(85 , 85, 85);
@@ -50,14 +55,18 @@ nav{
   justify-content: space-around;
   align-items: center;
   height: 13vh;
+  z-index: 7;
+  background-color: black;
 }
 .nav-links{
-  gap: 2rem;
+  gap: 2.7rem;
   list-style: none;
   font-size: 3rem;
+  display: flex;
+  padding-top: 7%;
 }
 a{
-  color: black;
+  color: rgb(248, 245, 245);
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -233,10 +242,11 @@ a:hover{
 
 }
 .icon-cart{
-  color: black;
+  color: rgb(253, 251, 251);
   text-decoration: none;
   text-decoration-color: white;
 }
+
 .icon-cart:hover{
   color: grey;
   text-decoration: underline ;
@@ -265,8 +275,12 @@ a:hover{
 }
 
 .categories .box-container .box img{
-  margin:1rem 0;
-  height:15rem;
+ height: 20rem;
+ width: 15rem;
+ border-radius: .5rem;
+}
+.categories .box-container .box img:hover{
+  transform: scale(1.1);
 }
 
 .categories .box-container .box h3{
@@ -301,16 +315,24 @@ a:hover{
   display: flex;
   cursor: pointer;
   padding: 10px;
-  background-color: #eee;
+  background-color: transparent;
   border-radius: 30px;
   align-items: center;
   
+}
+.search-box::placeholder {
+  color: transparent; /* Hide actual placeholder text */
+  background-color: #ddd; /* Set a faint background for cursor */
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center; /* Position background at right */
+  background-size: 5px 10px; /* Size of the "cursor" background */
 }
 .search-box:hover input{
   width: 400px;
   height: 40px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
+  background-color: #f0f0f0;
 }
 .search-box input{
   width: 0;
@@ -320,12 +342,64 @@ a:hover{
   transition: 0.2s;
   background: transparent;
 }
-.search-box a .fas{
-  color:#1daf;
-  font-size: 18px;
+.choose{
+  width: 100%;
+  margin: auto;
+  position: relative;
 }
-.icon-cart .span{
-  display: block;
+.choose .img{
+  width: 1300px;
+  height: 400px;
 }
+.shop-men .btn{
+  margin-top: 1rem;
+  display: flex;
+  padding:.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  border:.2rem solid var(--black);
+  color:var(--black);
+  cursor: pointer;
+  background: none;
+  z-index: 100;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+  
+}
+.shop-men .btn:hover{
+  background: var(--black);
+    color:#fff;
+}
+.shop-women .btn{
+  margin-top: 1rem;
+  display: flex;
+  padding:.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  border:.2rem solid var(--black);
+  color:var(--black);
+  cursor: pointer;
+  background: none;
+  z-index: 100;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+  
+}
+.shop-women .btn:hover{
+  background: var(--orange);
+    color:#fff;
+}
+
+
+
+
+
+
 
 

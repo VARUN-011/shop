@@ -1,7 +1,11 @@
 @media screen and (min-width: 1300px) {
-     #categories{
+     #categories {
       padding:2rem 16%;
      }
+     .choose{
+       padding: 2rem 16%;
+       align-content: center;
+       } 
 
 }
 
@@ -32,6 +36,10 @@
               overflow-y: hidden;
        }  
        .categories{
+              padding: 2rem 10%;
+              align-content: center;
+       } 
+       .choose{
               padding: 2rem 10%;
               align-content: center;
        } 
