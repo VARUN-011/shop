@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Shop Name</title>
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mediaqureies.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqureies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shoping Site</title>
+   
 </head>
 <body>
-  <header>
-   
     <nav id="desktop-nav">
-        <li><a href="#/">shop</a></li>
+        <li><a href="home.html">shop</a></li>
       <div>
         <ul class="nav-links">
             <div class="search-box">
@@ -21,8 +20,8 @@
               <a href="#">
                 <i class="fa fa-search"></i>
             </div>
-          <li><a href="#women">women</a></li>
-          <li><a href="#men">men</a></li>
+          <li><a href="women.html">women</a></li>
+          <li><a href="men.html">men</a></li>
           <li><a href="#shop all">shop all</a></li>
           <li><a href="#about us">about us</a></li>
           <li></li>
@@ -36,242 +35,95 @@
         </ul>
       </div>
     </nav>  
-  
-    <nav id="hamburger-nav">
-      <div class="logo">shop</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#women" onclick="toggleMenu()">women</a></li>
-          <li><a href="#men"onclick="toggleMenu()">men</a></li>
-          <li><a href="#shop all"onclick="toggleMenu()">shop all</a></li>
-          <li><a href="#about us"onclick="toggleMenu()">about us</a></li>
-          <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-  </header>
-    <main>
-      <div class="slider">
-        <div class="list">
-            <div class="item">
-                <img src="./assest/banner-img1.jpg" alt="">
+        <section>
+            <div class="choose">
+              <img src="./assest/choose-banner-img.webp" alt="" style="width: 1300px; height: 500px;">
+              <div class="shop-men">
+                <a href="men.html" class="btn" id="btn1">shop for men</a>
+              </div>
+              <div class="shop-women">
+                <a href="women.html" class="btn" id="btn2">shop for women</a>
             </div>
-            <div class="item">
-                <img src="./assest/banner-img2.jpg" alt="">
+        
             </div>
-            <div class="item">
-                <img src="./assest/banner-img3.jpg" alt="">
+          </section>
+          <section id="mem">
+         
+            <div class="membership">
+                  <div class="texts">
+                      <h2 class="section-title">Buy membership now</h2>
+                      <h3 class="section-sub-heading">
+                          <span>Only</span> <strong>$40</strong>
+                          <span>for a</span> <strong>3months</strong>
+                          <span></span>
+                      </h3>
+                    </div>
+                    <div class="mem-btn">
+                    <button>Buy now</button></div>
+                  </div>
+                <div class="benifits">
+                      <h4>
+                        <li>Fast One-day deliveries</li>
+                        <li>special discounts</li>
+                        <li>Exclusive access to new arrivals</li>
+                        <li>Priority customer service</li>
+
+                      </h4>
+                  </div>
+          </div>
+        </section>
+
+
+
+          
+          <script src="script.js"></script>
+
+          <footer class="footer">
+              
+        <div class="inner">
+            <div class="column is-logo">
+                <a href="#" class="main-logo">
+                    <div class="logo">
+                        <img src="logo.png" alt="Shopping-site">
+                    </div>
+                   
+                </a>
+            </div>
+            <div class="column is-nav">
+                <div class="column-title">Navigation</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </div>
+            <div class="column is-nav">
+                <div class="column-title">Contact</div>
+                <ul>
+                    <li><a href="#"><i class="fa fa-envelope-open"></i> info@stackfindover.com</a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i>@stackfindover</a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i>Linkedin</a></li>
+                </ul>
+                <div class="column-title">Other</div>
+                <ul>
+                    <li><a href="#">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="column is-nav">
+                <div class="column-title">Blog</div>
+                <ul>
+                    <li><a href="#">What is jQuery</a></li>
+                    <li><a href="#">What is JavaScript</a></li>
+                    <li><a href="#">How to make money with a blog</a></li>
+                </ul>
             </div>
         </div>
-        <div class="buttons">
-          <button id="prev"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-          <button id="next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <ul class="dots">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    
-
-    <section class="categories" id="categories">
-    
-      <h1 class="heading">best sellers</h1>
-  
-      <div class="box-container">
-  
-          <div class="box">
-              <img src="./assest/anime-tees-img.jpeg" alt="">
-              <h3>Anime Tees men</h3>
-              <p>upto 45% off</p>
-              <a href="#" class="btn">shop now</a>
-          </div>
-  
-          <div class="box">
-              <img src="./assest/oversized-tess-img.webp" alt="">
-              <h3>Oversized Tees</h3>
-              <p>upto 45% off</p>
-              <a href="#" class="btn">shop now</a>
-          </div>
-  
-          <div class="box">
-              <img src="./assest/baggy-pant-img.jpeg" alt="">
-              <h3>Baggy Pants</h3>
-              <p>upto 45% off</p>
-              <a href="#" class="btn">shop now</a>
-          </div>
-  
-          <div class="box">
-              <img src="./assest/sneaker-img.jpeg" alt="">
-              <h3>Sneakers</h3>
-              <p>upto 45% off</p>
-              <a href="#" class="btn">shop now</a>
-          </div>
-  
-      </div>
-  
-  </section>
-  <section>
-    <div class="choose">
-      <img src="./assest/choose-banner-img.webp" alt="" style="width: 1300px; height: 500px;">
-      <div class="shop-men">
-        <button class="btn">shop for men</button>
-      </div>
-      <div class="shop-women">
-        <button class="btn">shop for women</button>
-      </div>
-
-    </div>
-  </section>
-  <section class="categories" id="categories">
-    
-    <h1 class="heading"> categories </h1>
-
-    <div class="box-container">
-
-        <div class="box" id="kurtas">
-            <img src="./assest/kurta-img.jpeg" alt="">
-            <h3>kurtas</h3>
-            <p>upto 45% off</p>
-            <a href="#" class="btn">shop now</a>
-        </div>
-
-        <div class="box">
-            <img src="./assest/sarees-img.jpeg" alt="">
-            <h3>Saree</h3>
-            <p>upto 45% off</p>
-            <a href="#" class="btn">shop now</a>
-        </div>
-
-        <div class="box">
-            <img src="./assest/formal-women-img.webp" alt="">
-            <h3>Formal wear</h3>
-            <p>upto 45% off</p>
-            <a href="#" class="btn">shop now</a>
-        </div>
-
-        <div class="box">
-          <img src="./assest/bottom-women-img.jpeg" alt="">
-          <h3>Bottoms</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">shop now</a>
-      </div>
-
-      <div class="box">
-        <img src="./assest/jeans-women-img.jpeg" alt="">
-        <h3>Jean</h3>
-        <p>upto 45% off</p>
-        <a href="#" class="btn">shop now</a>
-    </div>
-
-        <div class="box">
-            <img src="./assest/tees-women-img.jpeg" alt="">
-            <h3>Graphic Tees</h3>
-            <p>upto 45% off</p>
-            <a href="#" class="btn">shop now</a>
-        </div>
-        <div class="box">
-          <img src="./assest/footwear-women.jpeg" alt="">
-          <h3>Foot Wear</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">shop now</a>
-      </div>
-      <div class="box">
-        <img src="./assest/accessories-w-img.jpeg" alt="">
-        <h3>Accessories</h3>
-        <p>upto 45% off</p>
-        <a href="#" class="btn">shop now</a>
-    </div>
-
-    </div>
-
-</section>
-<!-- accessories -->
- <section class="categories" id="categories">
-    
-  <h1 class="heading"> <span>categories</span> </h1>
-
-  <div class="box-container">
-
-      <div class="box">
-          <img src="./assest/formal-men-img.webp" alt="">
-          <h3>Formal Wear</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">shop now</a>
-      </div>
-
-      <div class="box">
-          <img src="./assest/casual-men.jpeg" alt="">
-          <h3>Casual Wear</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">shop now</a>
-      </div>
-
-      <div class="box">
-          <img src="./assest/polo-tees.jpeg" alt="">
-          <h3>Polo T-Shirts</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">shop now</a>
-      </div>
-
-      <div class="box">
-          <img src="./assest/men-tees.jpeg" alt="">
-          <h3>T-shirts</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">shop now</a>
-      </div>
-      <div class="box">
-        <img src="./assest/oversized-tees-men.jpeg" alt="">
-        <h3>Oversized T-shirts</h3>
-        <p>upto 45% off</p>
-        <a href="#" class="btn">shop now</a>
-    </div>
-      <div class="box">
-        <img src="./assest/anime-tees.jpeg" alt="">
-        <h3>Anime T-shirts</h3>
-        <p>upto 45% off</p>
-        <a href="#" class="btn">shop now</a>
-    </div>
-    <div class="box">
-      <img src="./assest/activewear-men.jpeg" alt="">
-      <h3>Active wear</h3>
-      <p>upto 45% off</p>
-      <a href="#" class="btn">shop now</a>
-  </div>
-    <div class="box">
-      <img src="./assest/footwear-men.jpeg" alt="">
-      <h3>Footwear</h3>
-      <p>upto 45% off</p>
-      <a href="#" class="btn">shop now</a>
-    </div>
-    <div class="box">
-      <img src="./assest/sneakers-men.jpeg" alt="">
-      <h3>Sneakers</h3>
-      <p>upto 45% off</p>
-      <a href="#" class="btn">shop now</a>
-    </div>
-    <div class="box">
-      <img src="./assest/watch-men.jpeg" alt="">
-      <h3>Watches</h3>
-      <p>upto 45% off</p>
-      <a href="#" class="btn">shop now</a>
-    </div>
-
-  </div>
-
-</section> 
-
-    
-
-  <footer>
-  </footer>
-
-  <script src="script.js"></script>
+      
+    </footer>
+    <div class="logo-info">
+      <div class="text">Shopping-Site</div>
+      <span class="copyright">© 2024. All rights reserved.</span>
+          
 </body>
+
 </html>

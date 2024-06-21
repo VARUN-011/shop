@@ -190,3 +190,17 @@ function toggleMenu() {
       })
   }
   initApp();
+
+var content1 =document.getElementById("content1");
+var content2 =document.getElementById("content2");
+var btn1 =document.getElementById("btn1");
+var btn2 =document.getElementById("btn2");
+ function openmen(){
+    content1.style.transform = "translateY(0)";
+    content2.style.transform = "translateY(100%)";
+ }
+ function openwomen(){
+    content1.style.transform = "translateY(100%)";
+    content2.style.transform = "translateY(0)";
+ }
+
