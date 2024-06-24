@@ -43,164 +43,148 @@ function toggleMenu() {
   window.onresize = function(event) {
       reloadSlider();
   };
-  //cart func*
-  let listProductHTML = document.querySelector('.listProduct');
-  let listCartHTML = document.querySelector('.listCart');
-  let iconCart = document.querySelector('.icon-cart');
-  let iconCartSpan = document.querySelector('.icon-cart span');
-  let body = document.querySelector('body');
-  let closeCart = document.querySelector('.close');
-  let products = [];
-  let cart = [];
-  
-  
-  iconCart.addEventListener('click', () => {
-      body.classList.toggle('showCart');
-  })
-  closeCart.addEventListener('click', () => {
-      body.classList.toggle('showCart');
-  })
-  
-      const addDataToHTML = () => {
-      // remove datas default from HTML
-  
-          // add new datas
-          if(products.length > 0) // if has data
-          {
-              products.forEach(product => {
-                  let newProduct = document.createElement('div');
-                  newProduct.dataset.id = product.id;
-                  newProduct.classList.add('item');
-                  newProduct.innerHTML = 
-                  `<img src="${product.image}" alt="">
-                  <h2>${product.name}</h2>
-                  <div class="price">$${product.price}</div>
-                  <button class="addCart">Add To Cart</button>`;
-                  listProductHTML.appendChild(newProduct);
-              });
-          }
-      }
-      listProductHTML.addEventListener('click', (event) => {
-          let positionClick = event.target;
-          if(positionClick.classList.contains('addCart')){
-              let id_product = positionClick.parentElement.dataset.id;
-              addToCart(id_product);
-          }
-      })
-  const addToCart = (product_id) => {
-      let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
-      if(cart.length <= 0){
-          cart = [{
-              product_id: product_id,
-              quantity: 1
-          }];
-      }else if(positionThisProductInCart < 0){
-          cart.push({
-              product_id: product_id,
-              quantity: 1
-          });
-      }else{
-          cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
-      }
-      addCartToHTML();
-      addCartToMemory();
-  }
-  const addCartToMemory = () => {
-      localStorage.setItem('cart', JSON.stringify(cart));
-  }
-  const addCartToHTML = () => {
-      listCartHTML.innerHTML = '';
-      let totalQuantity = 0;
-      if(cart.length > 0){
-          cart.forEach(item => {
-              totalQuantity = totalQuantity +  item.quantity;
-              let newItem = document.createElement('div');
-              newItem.classList.add('item');
-              newItem.dataset.id = item.product_id;
-  
-              let positionProduct = products.findIndex((value) => value.id == item.product_id);
-              let info = products[positionProduct];
-              listCartHTML.appendChild(newItem);
-              newItem.innerHTML = `
-              <div class="image">
-                      <img src="${info.image}">
-                  </div>
-                  <div class="name">
-                  ${info.name}
-                  </div>
-                  <div class="totalPrice">$${info.price * item.quantity}</div>
-                  <div class="quantity">
-                      <span class="minus"><</span>
-                      <span>${item.quantity}</span>
-                      <span class="plus">></span>
-                  </div>
-              `;
-          })
-      }
-      iconCartSpan.innerText = totalQuantity;
-  }
-  
-  listCartHTML.addEventListener('click', (event) => {
-      let positionClick = event.target;
-      if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
-          let product_id = positionClick.parentElement.parentElement.dataset.id;
-          let type = 'minus';
-          if(positionClick.classList.contains('plus')){
-              type = 'plus';
-          }
-          changeQuantityCart(product_id, type);
-      }
-  })
-  const changeQuantityCart = (product_id, type) => {
-      let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
-      if(positionItemInCart >= 0){
-          let info = cart[positionItemInCart];
-          switch (type) {
-              case 'plus':
-                  cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
-                  break;
-          
-              default:
-                  let changeQuantity = cart[positionItemInCart].quantity - 1;
-                  if (changeQuantity > 0) {
-                      cart[positionItemInCart].quantity = changeQuantity;
-                  }else{
-                      cart.splice(positionItemInCart, 1);
-                  }
-                  break;
-          }
-      }
-      addCartToHTML();
-      addCartToMemory();
-  }
-  
-  const initApp = () => {
-      // get data product
-      fetch('products.json')
-      .then(response => response.json())
-      .then(data => {
-          products = data;
-          addDataToHTML();
-  
-          // get data cart from memory
-          if(localStorage.getItem('cart')){
-              cart = JSON.parse(localStorage.getItem('cart'));
-              addCartToHTML();
-          }
-      })
-  }
-  initApp();
+ // open cart modal
+const cart = document.querySelector('#cart');
+const cartModalOverlay = document.querySelector('.cart-modal-overlay');
 
-var content1 =document.getElementById("content1");
-var content2 =document.getElementById("content2");
-var btn1 =document.getElementById("btn1");
-var btn2 =document.getElementById("btn2");
- function openmen(){
-    content1.style.transform = "translateY(0)";
-    content2.style.transform = "translateY(100%)";
+cart.addEventListener('click', () => {
+  if (cartModalOverlay.style.transform === 'translateX(-200%)'){
+    cartModalOverlay.style.transform = 'translateX(0)';
+  } else {
+    cartModalOverlay.style.transform = 'translateX(-200%)';
+  }
+})
+// end of open cart modal
+
+// close cart modal
+const closeBtn = document.querySelector ('#close-btn');
+
+closeBtn.addEventListener('click', () => {
+  cartModalOverlay.style.transform = 'translateX(-200%)';
+});
+
+cartModalOverlay.addEventListener('click', (e) => {
+  if (e.target.classList.contains('cart-modal-overlay')){
+    cartModalOverlay.style.transform = 'translateX(-200%)'
+  }
+})
+// end of close cart modal
+
+// add products to cart
+const addToCart = document.getElementsByClassName('add-to-cart');
+const productRow = document.getElementsByClassName('product-row');
+
+for (var i = 0; i < addToCart.length; i++) {
+  button = addToCart[i];
+  button.addEventListener('click', addToCartClicked)
+}
+
+function addToCartClicked (event) {
+  button = event.target;
+  var cartItem = button.parentElement;
+  var price = cartItem.getElementsByClassName('product-price')[0].innerText;
+  
+  var imageSrc = cartItem.getElementsByClassName('product-image')[0].src;
+  addItemToCart (price, imageSrc);
+  updateCartPrice()
+}
+
+function addItemToCart (price, imageSrc) {
+  var productRow = document.createElement('div');
+  productRow.classList.add('product-row');
+  var productRows = document.getElementsByClassName('product-rows')[0];
+  var cartImage = document.getElementsByClassName('cart-image');
+  
+  for (var i = 0; i < cartImage.length; i++){
+    if (cartImage[i].src == imageSrc){
+      alert ('This item has already been added to the cart')
+      return;
+    }
+  }
+  
+  var cartRowItems = `
+  <div class="product-row">
+        <img class="cart-image" src="${imageSrc}" alt="">
+        <span class ="cart-price">${price}</span>
+        <input class="product-quantity" type="number" value="1">
+        <button class="remove-btn">Remove</button>
+        </div>
+        
+      `
+  productRow.innerHTML = cartRowItems;
+  productRows.append(productRow);
+  productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem)
+  productRow.getElementsByClassName('product-quantity')[0].addEventListener('change', changeQuantity)
+  updateCartPrice()
+}
+// end of add products to cart
+
+// Remove products from cart
+const removeBtn = document.getElementsByClassName('remove-btn');
+for (var i = 0; i < removeBtn.length; i++) {
+  button = removeBtn[i]
+  button.addEventListener('click', removeItem)
+}
+
+function removeItem (event) {
+  btnClicked = event.target
+  btnClicked.parentElement.parentElement.remove()
+  updateCartPrice()
+}
+
+// update quantity input
+var quantityInput = document.getElementsByClassName('product-quantity')[0];
+
+for (var i = 0; i < quantityInput; i++){
+  input = quantityInput[i]
+  input.addEventListener('change', changeQuantity)
+}
+
+function changeQuantity(event) {
+  var input = event.target
+  if (isNaN(input.value) || input.value <= 0){
+    input.value = 1
+  }
+  updateCartPrice()
+}
+// end of update quantity input
+
+// update total price
+function updateCartPrice() {
+  var total = 0
+  for (var i = 0; i < productRow.length; i += 2) {
+    cartRow = productRow[i]
+  var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+  var quantityElement = cartRow.getElementsByClassName('product-quantity')[0]
+  var price = parseFloat(priceElement.innerText.replace('$', ''))
+  var quantity = quantityElement.value
+  total = total + (price * quantity )
+    
+  }
+  document.getElementsByClassName('total-price')[0].innerText =  '$' + total
+
+document.getElementsByClassName('cart-quantity')[0].textContent = i /= 2
+}
+// end of update total price
+
+// purchase items
+const purchaseBtn = document.querySelector('.purchase-btn');
+
+const closeCartModal = document.querySelector('.cart-modal');
+
+purchaseBtn.addEventListener('click', purchaseBtnClicked)
+
+function purchaseBtnClicked () {
+  alert ('Thank you for your purchase');
+  cartModalOverlay.style.transform= 'translateX(-100%)'
+ var cartItems = document.getElementsByClassName('product-rows')[0]
+ while (cartItems.hasChildNodes()) {
+   cartItems.removeChild(cartItems.firstChild)
+   
  }
- function openwomen(){
-    content1.style.transform = "translateY(100%)";
-    content2.style.transform = "translateY(0)";
- }
+  updateCartPrice()
+}
+// end of purchase items
+
+//alert user if cart is empty
 

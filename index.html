@@ -11,6 +11,7 @@
    
 </head>
 <body>
+  <header>
     <nav id="desktop-nav">
         <li><a href="home.html">shop</a></li>
       <div>
@@ -20,10 +21,8 @@
               <a href="#">
                 <i class="fa fa-search"></i>
             </div>
-          <li><a href="women.html">women</a></li>
-          <li><a href="men.html">men</a></li>
           <li><a href="#shop all">shop all</a></li>
-          <li><a href="#about us">about us</a></li>
+          <li><a href="#footer">about us</a></li>
           <li></li>
           <li><a href="profile"><i class="fa-regular fa-user"></a></i></li>
           <div class="icon-cart">
@@ -35,9 +34,26 @@
         </ul>
       </div>
     </nav>  
+    <nav id="hamburger-nav">
+      <div class="logo">shop</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#profile"onclick="toggleMenu()">Profile</a></li>
+          <li><a href="#shop all"onclick="toggleMenu()">shop all</a></li>
+          <li><a href="#about us"onclick="toggleMenu()">about us</a></li>
+          <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+  </header>
         <section>
             <div class="choose">
-              <img src="./assest/choose-banner-img.webp" alt="" style="width: 1300px; height: 500px;">
+              <img src="./assest/choose-banner-img.webp" id="choose-img" alt="" style="width: 1300px; height: 500px;">
               <div class="shop-men">
                 <a href="men.html" class="btn" id="btn1">shop for men</a>
               </div>
@@ -57,10 +73,10 @@
                           <span>for a</span> <strong>3months</strong>
                           <span></span>
                       </h3>
-                    </div>
+                  
                     <div class="mem-btn">
-                    <button>Buy now</button></div>
-                  </div>
+                    <button class="buy">Buy now</button></div>
+                  </div></div>
                 <div class="benifits">
                       <h4>
                         <li>Fast One-day deliveries</li>
@@ -78,7 +94,7 @@
           
           <script src="script.js"></script>
 
-          <footer class="footer">
+          <footer class="footer" id="footer">
               
         <div class="inner">
             <div class="column is-logo">
@@ -94,6 +110,8 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Login</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
                     <li><a href="#">Join</a></li>
                 </ul>
             </div>
@@ -104,17 +122,17 @@
                     <li><a href="#"><i class="fa fa-twitter"></i>@stackfindover</a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i>Linkedin</a></li>
                 </ul>
-                <div class="column-title">Other</div>
+                <!-- <div class="column-title">Other</div>
                 <ul>
                     <li><a href="#">Quiz</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="column is-nav">
                 <div class="column-title">Blog</div>
                 <ul>
-                    <li><a href="#">What is jQuery</a></li>
-                    <li><a href="#">What is JavaScript</a></li>
-                    <li><a href="#">How to make money with a blog</a></li>
+                    <li><a href="#">New collections</a></li>
+                    <li><a href="#">What's Trending</a></li>
+                    <li><a href="#">Write a Blog</a></li>
                 </ul>
             </div>
         </div>

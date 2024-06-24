@@ -6,15 +6,25 @@
        padding: 2rem 16%;
        align-content: center;
        } 
+       #mem{
+        padding: 2rem 16%;
+      }
+      .benifits{
+        bottom: 24vh;
+      }
 
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (min-width: 200px) and (max-width:1000px){
        #desktop-nav {
               display: none;
             }
        #hamburger-nav {
               display: flex;
+              color: white;
+            }
+            .hamburger-icon{
+                color: white;
             }
        .nav{
               height: 10%;
@@ -40,9 +50,28 @@
               align-content: center;
        } 
        .choose{
-              padding: 2rem 10%;
+              max-width: 100%;
               align-content: center;
-       } 
+              padding-bottom: 2rem;
+       }
+       .choose .btn{
+        width: 12rem;
+        padding: 1rem;
+        text-decoration: none;
+       }
+       #choose-img{
+        max-width: 100%;
+       }
+       .mem{
+        padding: 2rem 10%;
+        margin-top: 2rem;
+       }
+       .membership{
+        max-width: 100%;
+       }
+       .benifits{
+        bottom: 38vh;
+       }
      }
      @media only screen and (max-width: 990px) and (min-width: 200px) {
        body {
@@ -80,3 +109,11 @@
            order: 4;
        }
      }
+@media screen and (min-width:768px){
+    .hamburger-nav{
+        display: none;
+    }
+    .desktop-nav{
+        display:flex;
+    }
+}
