@@ -25,11 +25,9 @@
           <li><a href="#footer">about us</a></li>
           <li></li>
           <li><a href="profile"><i class="fa-regular fa-user"></a></i></li>
-          <div class="icon-cart">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
-            </svg>
-            <span>0</span>
+          <div class="cart-btn">
+            <i id="cart" class="fas fa-shopping-cart"></i>
+              <span class ="cart-quantity">0</span>
           </div>
         </ul>
       </div>
@@ -53,7 +51,7 @@
   </header>
         <section>
             <div class="choose">
-              <img src="./assest/choose-banner-img.webp" id="choose-img" alt="" style="width: 1300px; height: 500px;">
+              <img src="./assest/choose-banner-img.webp" id="choose-img" alt="" style=" height: 500px;">
               <div class="shop-men">
                 <a href="men.html" class="btn" id="btn1">shop for men</a>
               </div>
@@ -106,35 +104,27 @@
                 </a>
             </div>
             <div class="column is-nav">
-                <div class="column-title">Navigation</div>
+                <div class="column-title" id="col">Navigation</div>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Join</a></li>
+                    <li><a href="home.html" id="links" style="font-size: 2rem;  gap: .5rem;">Home</a></li>
+                    <li><a href="#desktop-nav" id="links" style="font-size: 2rem; gap: .5rem;"">Login</a></li>
+                    <li><a href="men.html"id="links" style="font-size: 2rem; gap: .5rem;"">Men</a></li>
+                    <li><a href="women.html"id="links" style="font-size: 2rem; gap: .5rem;"">Women</a></li>
+                    <li><a href="#mem"id="links" style="font-size: 2rem; gap: .5rem;"">Join</a></li>
                 </ul>
             </div>
             <div class="column is-nav">
-                <div class="column-title">Contact</div>
+                <div class="column-title" >Contact</div>
                 <ul>
-                    <li><a href="#"><i class="fa fa-envelope-open"></i> info@stackfindover.com</a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i>@stackfindover</a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i>Linkedin</a></li>
+                    <li><a href="#" id="contacts"><i class="fa-solid fa-envelope"></i> shopping@gmial.com</a></li><br>
+                    <li><a href="#" id="contacts"><i class="fa-brands fa-twitter"></i>  @twitter</a></li><br>
+                    <li><a href="#" id="contacts"><i class="fa-brands fa-linkedin"></i></i> @Linkedin</a></li><br>
                 </ul>
                 <!-- <div class="column-title">Other</div>
                 <ul>
                     <li><a href="#">Quiz</a></li>
                 </ul>
             </div> -->
-            <div class="column is-nav">
-                <div class="column-title">Blog</div>
-                <ul>
-                    <li><a href="#">New collections</a></li>
-                    <li><a href="#">What's Trending</a></li>
-                    <li><a href="#">Write a Blog</a></li>
-                </ul>
-            </div>
         </div>
       
     </footer>

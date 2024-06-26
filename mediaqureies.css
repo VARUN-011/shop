@@ -38,7 +38,8 @@
             }
             .menu-links{
                 z-index: 200;
-                width: 90px;
+                width: 100px;
+                height: 180px;
             }
        .nav{
               height: 10%;
@@ -60,7 +61,7 @@
               overflow-y: hidden;
        }  
        .categories{
-              padding: 2rem 7%;
+              padding: 2rem 3%;
               align-content: center;
               
        } 
@@ -117,16 +118,21 @@
         height: 310px;
         border-radius: 5px;
        }
+       .membership .texts{
+        max-width: 100%;
+       }
        .mem-btn{
         padding: 1rem;
        }
        .benifits{
+        display: none;
         align-items: center;
         overflow-y: hidden;
         scroll-behavior: none;
-        position: relative;
+        position: absolute;
         font-size: xx-small;
-        bottom: 14vh;
+        top: 97%;
+        bottom: 0%;
         left: 20%;
        }
        .benifits li:hover{
@@ -206,7 +212,7 @@
             color:#fff;
         }
         .best-seller{
-          padding: 2rem 7%;;
+          padding: 2rem 3%;;
         }
         #best-seller .items-container{
           display: flex;
@@ -227,7 +233,45 @@
         .box1{
           display: flex;
         }
-}
+         .cart-btn1 .fa-shopping-cart{
+          position: absolute;
+          left: 75%;
+          bottom: 27%;
+          font-size: 2rem;
+        }
+        .cart-modal-overlay1 {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, .5);
+          z-index: 90;
+          transform: translateX(-200%);
+          transition: .5s ease-out; 
+          }
+          .cart-modal1 {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(248, 245, 245);
+            float: right;
+            overflow: scroll;
+            overflow-x: hidden;
+          }
+          #close-btn1 {
+            font-size: 2rem;
+            position: relative;
+            top: 5%;
+            float: right;
+            margin: .5em 2em 0 0;
+            color: rgb(1, 0, 0);
+            cursor: pointer;
+          }
+          .cart-total{
+            color:black;
+            padding-top: 5rem;
+          }
+          }
      /* above for small screens */
      /* @media only screen and (max-width: 990px) and (min-width: 200px) {
        body {
@@ -274,8 +318,11 @@
     .desktop-nav{
         display:flex;
     }
+    .mob-bar{
+      display: none;
+    }
     #categories {
-        padding:2rem 9%;
+        padding:2rem 16%;
        }
        .choose{
         padding:2rem 9%;
@@ -289,6 +336,7 @@
         }
         #choose-img{
             max-width: 100%;
+            width: 1600px;
            }
         .shop-women .btn{
             position: absolute;
@@ -369,5 +417,11 @@
           }
           .card:hover .add-to-cart {
             transform: translateX(0);
+          }
+          .best-seller{
+            padding: 2rem 16%;
+          }
+          #mob-cart-overlay{
+            display: none;
           }
         }

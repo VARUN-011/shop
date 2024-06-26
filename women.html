@@ -21,10 +21,9 @@
               <a href="#">
                 <i class="fa fa-search"></i>
             </div>
-          <li><a href="#/">women</a></li>
           <li><a href="men.html">men</a></li>
           <li><a href="#shop all">shop all</a></li>
-          <li><a href="#about us">about us</a></li>
+          <li><a href="index.html">about us</a></li>
           <li></li>
           <li><a href="profile"><i class="fa-regular fa-user"></a></i></li>
           <div class="cart-btn">
@@ -48,7 +47,7 @@
           </div>
     </div></nav>
       <nav id="hamburger-nav">
-        <div class="logo">shop</div>
+        <div class="logo"><a href="index.html">shop</a></div>
         <div class="hamburger-menu">
           <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
@@ -56,11 +55,10 @@
             <span></span>
           </div>
           <div class="menu-links">
-            <li><a href="#/" onclick="toggleMenu()">women</a></li>
             <li><a href="men.html"onclick="toggleMenu()">men</a></li>
-            <li><a href="#shop all"onclick="toggleMenu()">shop all</a></li>
-            <li><a href="#about us"onclick="toggleMenu()">about us</a></li>
-            <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
+            <li><a href="home.html"onclick="toggleMenu()">shop all</a></li>
+            <li><a href="index.html"onclick="toggleMenu()">about us</a></li>
+            <li><a href="index.html"onclick="toggleMenu()">Contact</a></li>
           </div>
         </div>
       </nav>
@@ -154,44 +152,67 @@
   
   </section>
      </div>
-     <section class="best-seller">
+     <section class="best-seller" id="best-seller">
       <h1 class="heading">Best Seller</h1>
         <div class="items-container">
           
           <div class="box1">
-          <div class="card-1 card" id="product">
-            <img class="product-image" src="./assest/image-1.webp" alt="">
+            <div class="card-1 card" id="product">
+              <img class="product-image" src="./assest/women-img1.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                  <span class="product-price">1395/-</span>
+            </div></div>
+            <div class="box1">
+            <div class="card-2 card" id="product">
+              <img class="product-image" src="./assest/women-img2.jpg" alt="">
               <button class="add-to-cart">Add to cart</button>
-                <span class="product-price">$1395</span>
-          </div></div>
-          <div class="box1">
-          <div class="card-2 card" id="product">
-            <img class="product-image" src="./assest/image-2.webp" alt="">
-            <button class="add-to-cart">Add to cart</button>
-              <span class="product-price">$1175</span>
-          </div></div>
-          <div class="box1">
-          <div class="card-3 card" id="product">
-            <img class="product-image" src="./assest/image-3.webp" alt="">
+                <span class="product-price">1175/-</span>
+            </div></div>
+            <div class="box1">
+            <div class="card-3 card" id="product">
+              <img class="product-image" src="./assest/women-img3.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                  <span class="product-price">1150/-</span>
+            </div></div>
+            <div class="box1">
+            <div class="card-4 card" id="product">
+              <img class="product-image" src="./assest/women-img4.jpg" alt="">
+                 <button class="add-to-cart">Add to cart</button>
+                <span class="product-price">1575/-</span>
+            </div></div>
+            <div class="box1">
+            <div class="card-5 card" id="product">
+              <img class="product-image" src="./assest/women-img5.jpg" alt="">
               <button class="add-to-cart">Add to cart</button>
-                <span class="product-price">$1150</span>
-          </div></div>
-          <div class="box1">
-          <div class="card-4 card" id="product">
-            <img class="product-image" src="./assest/image-4.webp" alt="">
-               <button class="add-to-cart">Add to cart</button>
-              <span class="product-price">$1575</span>
-          </div></div>
-          <div class="box1">
-          <div class="card-5 card" id="product">
-            <img class="product-image" src="./assest/image-5.webp" alt="">
-            <button class="add-to-cart">Add to cart</button>
-            <span class="product-price">$1230</span>
-          </div></div>
+              <span class="product-price">1230/-</span>
+            </div></div>
         </div>  
       </div>
     </section>
-
+    <section>
+      <div class="mob-bar">
+        <div class="profile">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="cart-btn1">
+          <i id="cart1" class="fas fa-shopping-cart"></i>
+            <span class ="cart-quantity">0</span>
+        </div>
+      </div>
+      <div class="cart-modal-overlay1" id="mob-cart-overlay">
+        <div class="cart-modal1">
+          <i id="close-btn1" class="fas fa-times"></i>
+            <h1 class="cart-is-empty">Cart is empty</h1>
+          
+          <div class="product-rows">
+        </div>
+          <div class="total">
+            <h1 class="cart-total">CART</h1>
+            <span class="total-price">$0</span>
+            <button class="purchase-btn">PURCHASE</button>
+          </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
 </body>

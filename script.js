@@ -46,7 +46,6 @@ function toggleMenu() {
  // open cart modal
 const cart = document.querySelector('#cart');
 const cartModalOverlay = document.querySelector('.cart-modal-overlay');
-
 cart.addEventListener('click', () => {
   if (cartModalOverlay.style.transform === 'translateX(-200%)'){
     cartModalOverlay.style.transform = 'translateX(0)';
@@ -188,3 +187,24 @@ function purchaseBtnClicked () {
 
 //alert user if cart is empty
 
+//cart for mobile screen
+const mobcart = document.querySelector('#cart1');
+const cartModalOverlay1 = document.querySelector('.cart-modal-overlay1');
+mobcart.addEventListener('click', () => {
+  if (cartModalOverlay1.style.transform === 'translateX(-200%)'){
+    cartModalOverlay1.style.transform = 'translateX(0)';
+  } else {
+    cartModalOverlay1.style.transform = 'translateX(-200%)';
+  }
+})
+const mobcloseBtn = document.querySelector ('#close-btn1');
+
+  mobcloseBtn.addEventListener('click', () => {
+  cartModalOverlay1.style.transform = 'translateX(-200%)';
+});
+
+cartModalOverlay1.addEventListener('click', (e) => {
+  if (e.target.classList.contains('cart-modal-overlay1')){
+    cartModalOverlay1.style.transform = 'translateX(-200%)'
+  }
+})
