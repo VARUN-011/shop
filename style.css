@@ -91,7 +91,7 @@ a:hover{
 .hamburger-menu {
   position: relative;
   display: inline-block;
-  z-index: 10;
+  z-index: 40;
 }
 
 .hamburger-icon {
@@ -106,7 +106,7 @@ a:hover{
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: rgb(248, 245, 245);
+  background-color: rgb(192, 186, 186);
   transition: all 0.3 ease-in-out;
 }
 
@@ -114,11 +114,13 @@ a:hover{
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: rgb(161, 157, 157);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+  border-radius: 5px;
+
 }
 
 .menu-links a {
@@ -133,6 +135,7 @@ a:hover{
 
 .menu-links li {
   list-style: none;
+
 }
 .menu-links li:hover {
   background-color: #f0f0f0;
@@ -142,6 +145,7 @@ a:hover{
 
 .menu-links.open {
   max-height: 300px;
+
 }
 
 .hamburger-icon.open span:first-child {
@@ -169,9 +173,6 @@ a:hover{
 }
 
 .slider{
-  width: 1300px;
-  max-width: 100vw;
-  height: 700px;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -186,8 +187,6 @@ a:hover{
   transition: 1s;
 }
 .slider .list img{
-  width: 1300px;
-  max-width: 100vw;
   height: 100%;
   object-fit: cover;
 }
@@ -241,63 +240,6 @@ a:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
-.categories .box-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-  gap:1.5rem;
-}
-
-.categories .box-container .box{
-  padding:3rem 2rem;
-  border-radius: .5rem;
-  background:#fff;
-  box-shadow: var(--box-shadow);
-  outline:var(--outline);
-  outline-offset: -1rem;
-  text-align: center;
-}
-
-.categories .box-container .box:hover{
-  outline:var(--outline-hover);
-  outline-offset: 0rem;
-}
-
-.categories .box-container .box img{
- height: 20rem;
- width: 15rem;
- border-radius: .5rem;
-}
-.categories .box-container .box img:hover{
-  transform: scale(1.1);
-}
-
-.categories .box-container .box h3{
- font-size: 2rem;
- color:var(--black);
- line-height: 1.8;
-}
-
-.categories .box-container .box p{
-  font-size: 1.7rem;
-  color:var(--light-color);
-  line-height: 1.8;
-  padding:1rem 0;
-}
-.categories .btn{
-  margin-top: 1rem;
-  display: inline-block;
-  padding:.8rem 3rem;
-  font-size: 1.7rem;
-  border-radius: .5rem;
-  border:.2rem solid var(--black);
-  color:var(--black);
-  cursor: pointer;
-  background: none;
-}
-.categories .btn:hover{
-  background: var(--orange);
-    color:#fff;
-}
 .search-box{
   height: 30px;
   display: flex;
@@ -349,7 +291,7 @@ a:hover{
   color:var(--black);
   cursor: pointer;
   background: none;
-  z-index: 100;
+  z-index: 20;
   position: absolute;
   top: 30%;
   left: 40%;
@@ -372,7 +314,7 @@ a:hover{
   cursor: pointer;
   background: none;
   z-index: 100;
-  position: absolute;
+  
   top: 30%;
   left: 60%;
   transform: translate(-50%, -50%);
@@ -477,7 +419,6 @@ a:hover{
   
 }
 .mem-btn{
-  padding-left: 4rem;
   padding-top: 2rem;
 
 }
@@ -536,9 +477,7 @@ a:hover{
   background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
 .benifits{
-  position: relative;
-  font-size: 1.5rem;
-  left: 60%;
+  
 }
 .benifits li{
   list-style: none;
@@ -799,6 +738,7 @@ a:hover{
   z-index: 20;
   position: relative;
 }
+
 
 
 
